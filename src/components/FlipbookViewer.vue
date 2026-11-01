@@ -969,7 +969,6 @@ const handleSaveMemory = async ({
     padding: 8px clamp(4px, 1.5vw, 10px) 10px;
   }
 }
-}
 
 .paper-back {
   position: absolute;
