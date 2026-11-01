@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Caveat', cursive;
+    --font-display: 'Caveat', cursive;
+    --font-handwriting: 'Caveat', cursive;
+    --font-note: 'Caveat', cursive;
+    --font-sans: 'Nunito', system-ui, -apple-system, sans-serif;
+    --scrapbook-pink: #fce7f3;
+    --scrapbook-baby-pink: #fbcfe8;
+    --scrapbook-cream: #fef3c7;
+    --scrapbook-sage: #d1fae5;
+    --scrapbook-ink: #584653;
+    --scrapbook-rose: #bd668d;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #fffaf7;
+    background-image:
+      radial-gradient(ellipse at 8% 12%, rgb(252 231 243 / 62%), transparent 34rem),
+      radial-gradient(ellipse at 92% 84%, rgb(209 250 229 / 42%), transparent 32rem),
+      radial-gradient(rgb(189 102 141 / 7%) 0.65px, transparent 0.65px);
+    background-size: auto, auto, 9px 9px;
+    color: var(--scrapbook-ink);
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 0.75rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid #ec8bb4;
+    outline-offset: 2px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-handwriting);
+  color: #704b61;
+}
+
+.font-serif-book {
+  font-family: var(--font-serif);
+}
+
+.font-display-book {
+  font-family: var(--font-display);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.scrapbook-paper {
+  border: 1px solid rgb(231 195 210 / 75%);
+  background-color: #fffdf8;
+  background-image:
+    linear-gradient(rgb(244 114 182 / 8%) 1px, transparent 1px),
+    radial-gradient(rgb(179 129 144 / 7%) 0.6px, transparent 0.6px);
+  background-size: 100% 29px, 7px 7px;
+  box-shadow: 0 12px 30px rgb(131 89 109 / 10%);
+}
+
+.scrapbook-panel {
+  border: 1px solid rgb(231 195 210 / 75%);
+  border-radius: 1.25rem;
+  background: rgb(255 253 248 / 88%);
+  box-shadow: 0 8px 24px rgb(131 89 109 / 8%);
+  backdrop-filter: blur(8px);
+}
+
+.scrapbook-washi {
+  position: relative;
+}
+
+.scrapbook-washi::before {
+  position: absolute;
+  z-index: 2;
+  top: -9px;
+  left: 50%;
+  width: 76px;
+  height: 19px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: rgb(251 207 232 / 78%);
+  clip-path: polygon(2% 0, 100% 7%, 96% 100%, 0 91%);
+  content: "";
+  pointer-events: none;
+}
+
+/* Paper textures & book shadows */
+.paper-texture {
+  background-color: #fffdf6;
+  background-image:
+    linear-gradient(rgb(244 114 182 / 17%) 1px, transparent 1px),
+    radial-gradient(rgb(179 129 144 / 7%) 0.6px, transparent 0.6px);
+  background-size: 100% 28px, 7px 7px;
+}
+
+.linen-texture {
+  background-color: #1a1a1a;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 2px, transparent 2px, transparent 4px);
+}
+
+.book-shadow {
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.25),
+    0 8px 10px -6px rgba(0, 0, 0, 0.2),
+    inset -2px 0 6px rgba(0,0,0,0.12);
+}
+
+.book-spread-shadow {
+  box-shadow: 
+    0 25px 50px -12px rgba(44, 30, 20, 0.35),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Page gutter spine shadow (spine of opened book) */
+.page-gutter-left {
+  box-shadow: inset -15px 0 20px -10px rgba(0, 0, 0, 0.15);
+}
+
+.page-gutter-right {
+  box-shadow: inset 15px 0 20px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Gold foil embossed effect */
+.foil-gold {
+  color: #D4AF37;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 -1px 1px rgba(255,255,255,0.2);
+}
+
+.foil-silver {
+  color: #E2E8F0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7), 0 -1px 1px rgba(255,255,255,0.4);
+}
+
+/* Polaroid photo card style */
+.polaroid-card {
+  background: #fffefa;
+  box-shadow: 0 5px 16px rgb(97 67 81 / 12%), 0 1px 3px rgb(97 67 81 / 8%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 24px rgb(97 67 81 / 16%);
+}
+
+/* Filter styles */
+.filter-vintage {
+  filter: sepia(0.35) contrast(1.05) brightness(0.95) saturate(1.1);
+}
+
+.filter-warm {
+  filter: sepia(0.25) saturate(1.25) hue-rotate(-10deg);
+}
+
+.filter-cool {
+  filter: saturate(0.9) hue-rotate(15deg) brightness(1.05);
+}
+
+.filter-sepia {
+  filter: sepia(0.8) contrast(0.95);
+}
+
+.filter-grayscale {
+  filter: grayscale(1) contrast(1.1);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(219 153 184 / 55%);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(189 102 141 / 72%);
+}
