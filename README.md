@@ -52,6 +52,7 @@ Memoria adalah aplikasi album foto digital yang hangat dan personal, dirancang u
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Framework**: Vue.js 3.5.13
 - **Language**: TypeScript 5.7.2
 - **Build Tool**: Vite 6.2.0
@@ -60,12 +61,14 @@ Memoria adalah aplikasi album foto digital yang hangat dan personal, dirancang u
 - **Styling**: Tailwind CSS 4.0.9
 
 ### Libraries
+
 - **@supabase/supabase-js** ^2.49.1 - Backend & Database
 - **page-flip** ^2.0.7 - Flipbook animation
 - **canvas-confetti** ^1.9.4 - Celebration effects
 - **lucide-vue-next** ^0.475.0 - Icon library
 
 ### Development Tools
+
 - **vue-tsc** - TypeScript type checking
 - **vite-plugin-vue-inspector** - Vue component inspector
 - **@tailwindcss/vite** - Tailwind CSS integration
@@ -75,6 +78,7 @@ Memoria adalah aplikasi album foto digital yang hangat dan personal, dirancang u
 ## 📋 Prerequisites
 
 Pastikan Anda telah menginstal:
+
 - **Node.js** v18 atau lebih tinggi
 - **npm** v9 atau lebih tinggi (atau yarn/pnpm)
 - **Git** untuk version control
@@ -84,17 +88,20 @@ Pastikan Anda telah menginstal:
 ## 🚀 Installation
 
 ### 1. Clone Repository
+
 ```bash
 git clone <repository-url>
 cd Project
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Setup Environment Variables
+
 Buat file `.env` di root directory:
 
 ```env
@@ -108,16 +115,19 @@ LAUNCH_EDITOR=code
 ## 🎯 Running the Project
 
 ### Development Mode
+
 ```bash
 npm run dev
 ```
 
 ### Build untuk Production
+
 ```bash
 npm run build
 ```
 
 ### Preview Production Build
+
 ```bash
 npm run preview
 ```
@@ -176,34 +186,44 @@ Project/
 ## 📚 Key Features Explained
 
 ### 1. Album Management (albumStore)
+
 Pinia store yang mengelola state album:
+
 - CRUD operations untuk albums
 - Pagination dan filtering
 - Favorites management
 
 ### 2. Editor View (EditorView.vue)
+
 Interface untuk membuat dan mengedit album:
+
 - Add/edit pages dengan berbagai layout
 - Upload dan manage photos
 - Customize cover design
 - Preview flipbook
 
 ### 3. Reader View (ReaderView.vue)
+
 Interface untuk membaca album:
+
 - Interactive page flip
 - Navigation controls
 - Fullscreen mode
 - Share options
 
 ### 4. Supabase Integration
+
 Cloud backend untuk:
+
 - Store albums & metadata
 - Store images di storage bucket
 - Real-time sync
 - Ready untuk authentication
 
 ### 5. Photo Filters & Effects
+
 6 filter tersedia:
+
 - `normal` - Original
 - `vintage` - Retro effect
 - `warm` - Warm tone
@@ -212,6 +232,7 @@ Cloud backend untuk:
 - `grayscale` - B&W
 
 ### 6. Page Layouts
+
 **single** | **single-full** | **split-v** | **split-h** | **polaroid** | **collage-3** | **grid-4** | **story**
 
 ---
@@ -228,6 +249,7 @@ Cloud backend untuk:
 ## 🎨 Styling
 
 Project menggunakan **Tailwind CSS v4** dengan custom color scheme:
+
 - Primary: `#584653` (mauve brown)
 - Background: `#FFFDF8` (warm white/ivory)
 - Accent: Pink/rose tones
@@ -246,23 +268,27 @@ Project menggunakan **Tailwind CSS v4** dengan custom color scheme:
 ## 🐛 Troubleshooting
 
 ### Port sudah digunakan
+
 ```bash
 npm run dev -- --port 3000
 ```
 
 ### Dependency issues
+
 ```bash
 rm -r node_modules package-lock.json
 npm install
 ```
 
 ### Supabase connection failed
+
 - Verifikasi URL dan keys di `.env`
 - Check Supabase project settings
 - Pastikan internet connection
 - Check browser console
 
 ### Build errors
+
 ```bash
 rm -r dist node_modules/.vite
 npm run build
@@ -272,29 +298,32 @@ npm run build
 
 ## 📝 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL | ✅ |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Supabase anon key | ✅ |
-| `LAUNCH_EDITOR` | Default editor (code for VS Code) | ❌ |
+| Variable                               | Description                       | Required |
+| -------------------------------------- | --------------------------------- | -------- |
+| `NEXT_PUBLIC_SUPABASE_URL`             | Supabase project URL              | ✅       |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Supabase anon key                 | ✅       |
+| `LAUNCH_EDITOR`                        | Default editor (code for VS Code) | ❌       |
 
 ---
 
 ## 🚀 Deployment
 
 ### Deploy ke Vercel
+
 ```bash
 npm install -g vercel
 vercel
 ```
 
 ### Deploy ke Netlify
+
 ```bash
 npm run build
 # Upload 'dist' folder ke Netlify
 ```
 
 ### Deploy ke GitHub Pages
+
 1. Update `vite.config.ts` dengan `base` path
 2. Build: `npm run build`
 3. Push ke `gh-pages` branch
@@ -328,6 +357,7 @@ Dibuat dengan ❤️ untuk melestarikan memori berharga.
 ## 📞 Support
 
 Jika ada masalah atau saran:
+
 - Buka issue di GitHub
 - Baca dokumentasi Vite: https://vitejs.dev
 - Baca dokumentasi Vue 3: https://vuejs.org
@@ -346,4 +376,3 @@ Jika ada masalah atau saran:
 ---
 
 **Happy memories with Memoria! 📖✨**
-

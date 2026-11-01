@@ -73,7 +73,7 @@ const showSupabaseModal = ref(false);
       <!-- Right Actions -->
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- Supabase Cloud Sync Modal Trigger -->
-        <button
+        <!-- <button
           @click="showSupabaseModal = true"
           :title="
             configStore.isConnectedToSupabase
@@ -99,7 +99,7 @@ const showSupabaseModal = ref(false);
           <span class="hidden sm:inline">{{
             configStore.isConnectedToSupabase ? "Supabase Sync" : "Cloud Sync"
           }}</span>
-        </button>
+        </button> -->
       </div>
     </div>
 
