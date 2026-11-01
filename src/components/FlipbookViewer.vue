@@ -392,6 +392,9 @@ const handleSaveMemory = async ({
   min-height: 490px;
   perspective: 1800px;
   perspective-origin: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .book-stage > .book-enter-active,
@@ -1152,48 +1155,197 @@ const handleSaveMemory = async ({
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 1024px) {
   .book-stage {
-    height: 440px;
-    min-height: 440px;
+    height: 450px;
+    min-height: 450px;
   }
 
   .cover-spread,
   .closed-book,
   .open-book {
-    min-height: 430px;
+    min-height: 440px;
   }
 
   .paper-page {
-    min-height: 430px;
+    min-height: 440px;
   }
 
   .paper-front {
-    padding: 15px 9px 22px;
+    padding: 12px 10px 18px;
+    font-size: 13px;
   }
 
   .polaroid-card {
-    height: 255px;
-  }
-
-  .polaroid-front {
-    padding: 9px 8px 8px;
+    height: 280px;
+    width: 200px;
   }
 
   .polaroid-front img {
-    height: 178px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-stage {
+    height: 400px;
+    min-height: 400px;
+    padding: 0 8px;
+  }
+
+  .cover-spread,
+  .closed-book,
+  .open-book {
+    min-height: 390px;
+  }
+
+  .paper-page {
+    min-height: 390px;
+  }
+
+  .paper-front {
+    padding: 10px 8px 15px;
+    font-size: 12px;
+  }
+
+  .paper-front h3 {
+    font-size: 13px;
+  }
+
+  .polaroid-card {
+    height: 260px;
+    width: 180px;
+  }
+
+  .polaroid-front {
+    padding: 8px 7px 6px;
+  }
+
+  .polaroid-front img {
+    height: 180px;
   }
 
   .polaroid-caption {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .polaroid-back {
-    padding: 11px 8px;
+    padding: 8px 6px;
+    font-size: 12px;
   }
 
   .back-story {
-    font-size: 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .book-stage {
+    height: 360px;
+    min-height: 360px;
+    padding: 0 4px;
+  }
+
+  .cover-spread,
+  .closed-book,
+  .open-book {
+    min-height: 350px;
+  }
+
+  .paper-page {
+    min-height: 350px;
+  }
+
+  .paper-front {
+    padding: 8px 6px 12px;
+    font-size: 11px;
+  }
+
+  .paper-front h3 {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .polaroid-card {
+    height: 240px;
+    width: 160px;
+  }
+
+  .polaroid-front {
+    padding: 7px 6px 5px;
+  }
+
+  .polaroid-front img {
+    height: 160px;
+    margin-bottom: 6px;
+  }
+
+  .polaroid-caption {
+    font-size: 13px;
+  }
+
+  .polaroid-back {
+    padding: 7px 5px;
+    font-size: 11px;
+  }
+
+  .back-story {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .book-stage {
+    height: 320px;
+    min-height: 320px;
+    padding: 0 2px;
+  }
+
+  .cover-spread,
+  .closed-book,
+  .open-book {
+    min-height: 310px;
+  }
+
+  .paper-page {
+    min-height: 310px;
+  }
+
+  .paper-front {
+    padding: 6px 5px 10px;
+    font-size: 10px;
+  }
+
+  .paper-front h3 {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .polaroid-card {
+    height: 220px;
+    width: 145px;
+  }
+
+  .polaroid-front {
+    padding: 6px 5px 4px;
+  }
+
+  .polaroid-front img {
+    height: 145px;
+    margin-bottom: 5px;
+  }
+
+  .polaroid-caption {
+    font-size: 12px;
+  }
+
+  .polaroid-back {
+    padding: 5px 4px;
+    font-size: 10px;
+  }
+
+  .back-story {
+    font-size: 10px;
   }
 }
 </style>
