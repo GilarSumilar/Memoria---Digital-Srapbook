@@ -375,4 +375,4 @@ Jika ada masalah atau saran:
 
 ---
 
-**Happy memories with Memoria! 📖✨**
+**Happy memories with Memoria!✨**
